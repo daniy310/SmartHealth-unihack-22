@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Pacient Requests</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <h1>Test</h1>
+    <input id="callInput">
+    <button id="nurse">Nurse</button>
+    <br><br>
+    <button id="emergency">EMERGENCY !!</button>
+    <br><br><br><br>
+    <button id="lightOff">Light Off</button>
+
+    <!-- <script src="./script.js"></script> -->
+    <script>
+        var mockRoom = "17";
+        var socket = io();
+
+        document.getElementById('emergency').onclick = function() {
+            var text = document.getElementById('callInput').value;
+            socket.emit('call', '1', '1', mockRoom, text) // aprindere bec, urgenta, nr camerei, text
+        };
+
+        document.getElementById('nurse').onclick = function() {
+            var text = document.getElementById('callInput').value;
+            socket.emit('call', '1', '0', mockRoom, text);
+        }
+
+        document.getElementById('lightOff').onclick = function() {
+            socket.emit('stop');
+        }
+
+        console.log("aa");
+    </script>
+</body>
+
+</html>
