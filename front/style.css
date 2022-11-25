@@ -1,0 +1,52 @@
+.logo{
+      margin-right: 1rem;
+      max-width: 5vw;
+      min-width: 35px;
+      width: 100%;
+      height: auto;
+}
+.navbar-brand{
+      margin-left: 2rem;
+      align-items: center;
+      width: auto;
+}
+.navbar{
+      background-color: rgba(33, 37, 41) !important;
+      align-items: center;
+      display: flex;
+}
+.navbar-nav{
+      align-items: center;
+}
+
+.color1{
+      border-radius: 10px;
+}
+
+.color1:hover {
+      background-color: #04ebec;
+      color: white;
+      border-radius: 10px;
+}
+.signinbutton{
+      background-color: #a4cc4c !important;
+      color: white;
+      border-radius: 10px;
+}
+
+.signin{
+      border-radius: 2rem;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+}
+.page-header {
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      align-items: center;
+      background-size: cover;
+      background-position: 53%;
+}
+.min-vh-75{
+      min-height: 50vh !important;
+}
