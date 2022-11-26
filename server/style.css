@@ -77,3 +77,16 @@
     font-size: 45px !important;
     font-weight: bold !important;
 }
+
+.phack {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.teammember {
+    font-size: 1.2rem;
+}
+
+.teamemb {
+    background-color: rgba(33, 37, 41, 0.9);
+}
