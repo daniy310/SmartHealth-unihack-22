@@ -15,13 +15,8 @@
                   <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1  pe-3">
                               <li class="nav-item ">
-                                    <a class="nav-link  color1  active text-white" aria-current="page" href="hospitalization.php">
-                                          <button class="btn text-white border-0 me-2" type="button"><b>Hospitalization</b></button>
-                                    </a>
-                              </li>
-                              <li class="nav-item ">
-                                    <a class="nav-link  color1  active text-white" aria-current="page" href="discharge.php">
-                                          <button class="btn text-white border-0 me-2" type="button"><b>Discharge</b></button>
+                                    <a class="nav-link  color1  active text-white" aria-current="page" href="assistp.php">
+                                          <button class="btn text-white border-0 me-2" type="button"><b>Assistance</b></button>
                                     </a>
                               </li>
                               <li class="nav-item ">
@@ -30,10 +25,6 @@
                                     </a>
                               </li>
                         </ul>
-                        <form class="d-flex mt-3" role="search">
-                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                              <button class="btn btn-success" type="submit">Search</button>
-                        </form>
                   </div>
             </div>
       </div>
