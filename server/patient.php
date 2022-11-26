@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user'])){
+if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user']) && $_SESSION['user'] == 2){
       
 ?>
 <?php require_once ('includes/header.php'); ?> 
@@ -13,7 +13,8 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user'
       <h1>Hello <?php echo $_SESSION['firstname']; ?></h1>
       <a href="logout.php">Logout</a>
 </body>
-</html>
+
+<?php require_once ('includes/footer.php'); ?> 
 
 <?php
 }else{

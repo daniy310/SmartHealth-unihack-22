@@ -85,6 +85,8 @@ if(!isset($_SESSION['id']) && !isset($_SESSION['email'])){
       </div>
 </body>
 
+<?php require_once ('includes/footer.php'); ?> 
+
 <?php
 }else{
       if($_SESSION['user'] == 1){

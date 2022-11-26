@@ -52,7 +52,7 @@ if(!isset($_SESSION['id']) && !isset($_SESSION['email'])){
 </body>
 
 
-
+<?php require_once ('includes/footer.php'); ?> 
 
 <?php
 }else{
