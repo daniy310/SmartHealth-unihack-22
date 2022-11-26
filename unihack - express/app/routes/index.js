@@ -17,9 +17,14 @@ module.exports = app => {
     );
 
     app.route('/patient_call/:userid/:text').get([], usersController.sendToArduino);
+    app.route('/patient_call/:userid').get([], usersController.sendToArduino);
     app.route('/patient_emergency_call/:userid/:text').get([], usersController.sendEmergencyToArduino);
+    app.route('/patient_emergency_call/:userid').get([], usersController.sendEmergencyToArduino);
     app.route('/patient_lightOff').get([], usersController.lightOffArduino);
+    app.route('/patient_room_lights/:userid').get([], usersController.roomLightArduino);
+    app.route('/patient_room_blinds/:userid').get([], usersController.roomBlindsArduino);
     app.route('/get_user/:userid').get([], usersController.findUserById);
+
 
     //app.route('/register').post()
 };

@@ -16,7 +16,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Smart Health Pacient Requests</title>
+            <title>Smart Health Room Control</title>
             <script src="https://cdn.socket.io/4.0.1/socket.io.js"></script>
         </head>
 
@@ -26,20 +26,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
 
             <div class="container my-4 py-4">
                 <div class="d-flex justify-content-center mb-3">
-                    <form class="row g-3 col-lg-6 col-11 shadow-lg signin text-center formHack" action="#">
+                    <form class="row g-3 col-lg-6 col-11 shadow-lg signin text-center formHack">
                         <div class="mb-3 pt-3 px-5">
-                            <h1>Nurse / Emergency Call</h1>
+                            <h1>Room Control</h1>
                         </div>
 
-                        <div class="mb-3 pt-3 px-5">
-                            <label for="email" class="form-label">Message (optional)</label>
-                            <input class="form-control" id="callInput">
+                        <div class="mb-3 px-5">
+                            <button class="btn signinbutton" id="roomLights">Turn the Light On/Off</button>
                         </div>
                         <div class="mb-3 px-5">
-                            <button class="btn signinbutton" id="nurse">Nurse</button>
-                        </div>
-                        <div class="mb-3 px-5">
-                            <button class="btn signinbutton btn-lg" id="emergency">EMERGENCY !!</button>
+                            <button class="btn signinbutton" id="blinds">Open/Close the Blinds</button>
                         </div>
 
                     </form>
@@ -48,33 +44,19 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
 
 
 
-
-            <br><br><br><br>
-            <button id="lightOff">Light Off</button>
-
-
             <script>
                 var userId = `<?php echo $_SESSION['id'] ?>`;
 
-                document.getElementById('emergency').onclick = function() {
-                    var text = document.getElementById('callInput').value;
+                document.getElementById('roomLights').onclick = function() {
                     var xmlHttp = new XMLHttpRequest();
-                    xmlHttp.open("GET", `http://localhost:3000/patient_emergency_call/${userId}/${text}`, false); // false for synchronous request
+                    xmlHttp.open("GET", `http://localhost:3000/patient_room_lights/${userId}`, false); // false for synchronous request
                     xmlHttp.send(null);
                     var response = xmlHttp.responseText;
                 };
 
-                document.getElementById('nurse').onclick = function() {
-                    var text = document.getElementById('callInput').value;
+                document.getElementById('blinds').onclick = function() {
                     var xmlHttp = new XMLHttpRequest();
-                    xmlHttp.open("GET", `http://localhost:3000/patient_call/${userId}/${text}`, false); // false for synchronous request
-                    xmlHttp.send(null);
-                    var response = xmlHttp.responseText;
-                }
-
-                document.getElementById('lightOff').onclick = function() { // DE MUTAT INTR O PAGINA A DOCTORULUI
-                    var xmlHttp = new XMLHttpRequest();
-                    xmlHttp.open("GET", "http://localhost:3000/patient_lightOff", false); // false for synchronous request
+                    xmlHttp.open("GET", `http://localhost:3000/patient_room_blinds/${userId}`, false); // false for synchronous request
                     xmlHttp.send(null);
                     var response = xmlHttp.responseText;
                 }

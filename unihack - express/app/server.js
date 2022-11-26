@@ -16,14 +16,14 @@ app.use(helmet());
 app.use(cors());
 app.use(compression());
 app.use(
-  bunyanMiddleware({
-    headerName: 'X-Request-Id',
-    propertyName: 'reqId',
-    logName: 'reqId',
-    obscureHeaders: ['authorization'],
-    logger,
-    additionalRequestFinishData: (_req, _res) => ({})
-  })
+    bunyanMiddleware({
+        headerName: 'X-Request-Id',
+        propertyName: 'reqId',
+        logName: 'reqId',
+        obscureHeaders: ['authorization'],
+        logger,
+        additionalRequestFinishData: (_req, _res) => ({})
+    })
 );
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,7 +33,7 @@ require('./routes/index')(app);
 
 // catch 404 and forward to error handler
 app.get('*', (_req, res) => {
-  res.send({ success: false, status: 404, message: 'Page not found.', data: {} }, 404);
+    res.send({ success: false, status: 404, message: 'Page not found.', data: {} }, 404);
 });
 
 const server = app.listen(port);
