@@ -6,17 +6,15 @@ if(!isset($_SESSION['id']) && !isset($_SESSION['email'])){
 ?>
 
 
-
-
 <?php require_once ('includes/header.php'); ?> 
 <body>
       <?php include ('includes/navbarindex.php'); ?>
-      <div class="page-header min-vh-75 relative" style="background-image: url('includes/images/.jpg')"> 
-
+      <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/signin.jpg')"> 
+                  <h1 class="text-center">Sign In</h1>
       </div>
       <div class="container my-4 py-4">
             <div class="d-flex justify-content-center mb-3">
-                  <form class="row g-3 col-lg-6 shadow-lg signin" action="signin-check.php" method="POST" >
+                  <form class="row g-3 col-lg-6 col-11 shadow-lg signin" action="signin-check.php" method="POST" >
                         <?php if(isset($_GET['error'])) {?>
                               <div class="px-5">
                                     <div class="alert alert-danger text-center" role="alert">
