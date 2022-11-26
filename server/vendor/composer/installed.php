@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => '__root__',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '4302b232ca0a78d6bac8b52f744e550c0ddc1e0a',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '4302b232ca0a78d6bac8b52f744e550c0ddc1e0a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'psr/log' => array(
+            'pretty_version' => '1.1.4',
+            'version' => '1.1.4.0',
+            'reference' => 'd49695b909c3b7628b6289db5479a1c204601f11',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/log',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'wisembly/elephant.io' => array(
+            'pretty_version' => 'v3.3.1',
+            'version' => '3.3.1.0',
+            'reference' => '9d56f409fe231a906af87005f83a135565632d3f',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../wisembly/elephant.io',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

@@ -1,8 +1,11 @@
-var fs = require('fs');
+const express = require('express'); //Line 1
+const app = express(); //Line 2
 var SerialPort = require('serialport');
-var http = require('http');
 
-var index = fs.readFileSync('./index.html');
+const http = require('http').Server(app);
+
+const io = require('socket.io')(http);
+
 
 const parsers = SerialPort.parsers;
 const parser = new parsers.Readline({
@@ -18,13 +21,6 @@ var port = new SerialPort('COM3', {
 });
 
 port.pipe(parser);
-
-var app = http.createServer(function(req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(index);
-});
-
-var io = require('socket.io')(app);
 
 io.on('connection', (socket) => {
     socket.on('call', (arg1, arg2, arg3, arg4) => {
@@ -48,4 +44,4 @@ io.on('connection', (socket) => {
     })
 })
 
-app.listen(3000);
+http.listen(8080);
