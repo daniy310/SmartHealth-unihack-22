@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user'])){
+if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user']) && $_SESSION['user'] == 1){
       
 ?>
 <?php require_once ('includes/header.php'); ?> 
@@ -74,11 +74,12 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user'
             </div>
       </div>
 </body>
-</html>
+
+<?php require_once ('includes/footer.php'); ?> 
 
 <?php
 }else{
-      header("Location: login.php");
+      header("Location: signin.php");
       exit();
 }
 
