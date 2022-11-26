@@ -24,7 +24,7 @@ const findUserById = async(req, res) => {
 
 const sendToArduino = async(req, res) => {
     const userId = req.params.userid;
-    const text = req.params.text;
+    const text = (req.params.text ? req.params.text : " ");
     const userData = await userModel.find(userId);
 
     const userRoomNumber = "" + userData.roomnumber;
@@ -41,7 +41,7 @@ const sendToArduino = async(req, res) => {
 
 const sendEmergencyToArduino = async(req, res) => {
     const userId = req.params.userid;
-    const text = req.params.text;
+    const text = (req.params.text ? req.params.text : " ");
     const userData = await userModel.find(userId);
 
     const userRoomNumber = "" + userData.roomnumber;
@@ -58,12 +58,26 @@ const sendEmergencyToArduino = async(req, res) => {
 
 const lightOffArduino = () => {
     port.write("0");
-    return handleSuccess(res, "Sent light off command to arduino", "");
+    return handleSuccess("Sent light off command to arduino", "");
+};
+
+
+
+const roomLightArduino = () => {
+    port.write("0");
+    return handleSuccess(res, "Sent room lights command to arduino", "");
+};
+
+const roomBlindsArduino = () => {
+    port.write("0");
+    return handleSuccess(res, "Sent room blinds command to arduino", "");
 };
 
 module.exports = {
     findUserById,
     sendToArduino,
     sendEmergencyToArduino,
-    lightOffArduino
+    lightOffArduino,
+    roomLightArduino,
+    roomBlindsArduino
 };
