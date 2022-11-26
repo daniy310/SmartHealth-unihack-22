@@ -1,7 +1,7 @@
 <?php 
 session_start();
-include "includes/db-conn.php";
-if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user']) && $_SESSION['user'] == 1){
+
+if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user']) && $_SESSION['user'] == 2){
       
 ?>
 <?php require_once ('includes/header.php'); ?> 
@@ -10,43 +10,9 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user'
       <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/signin.jpg')"> 
                   <h1 class="text-center">Assistance</h1>
       </div>
-      <div class="container my-4">
-            <table class="table">
-                  <thead class="thead-dark">
-                        <tr>
-                              <th scope="col">#</th>
-                              <th scope="col">First Name</th>
-                              <th scope="col">Last Name</th>
-                              <th scope="col">CNP</th>
-                              <th scope="col">Comment</th>
-                        </tr>
-                  </thead>
-      <?php 
-            $sql = "SELECT id, firstname, lastname, CNP, comment from users";
-            $result = $conn ->query($sql);
-            if($result -> num_rows > 0 )
-                  while($row = $result -> fetch_assoc()) if($row['comment']){ ?>
-                        <tbody>
-                                    <tr>
-                                          <th scope="row"><?php echo $row['id']; ?></th>
-                                          <td><?php echo $row['firstname']; ?></td>
-                                          <td><?php echo $row['lastname']; ?></td>
-                                          <td><?php echo $row['CNP']; ?></td>
-                                          <td>
-                                                <div class="alert alert-danger" role="alert">
-                                                      <?php echo $row['comment']; ?>
-                                                </div>
-                                          </td>
-                                    </tr>
-                              </tbody>
-                       
-      <?php } ?>
-            </table>
-      </div>
-
       <div class="container my-4 py-4">
             <div class="d-flex justify-content-center mb-3">
-                  <form class="row g-3 col-lg-6 col-11  shadow-lg signin" action="assist-check.php" method="POST" >
+                  <form class="row g-3 col-lg-6 col-11  shadow-lg signin" action="assistp-check.php" method="POST" >
                         <?php if(isset($_GET['error'])) {?>
                               <div class="px-5">
                                     <div class="alert alert-danger text-center" role="alert">
@@ -62,7 +28,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user'
                               </div>
                         <?php } ?>
                         <div class="form-group">
-                              <label for="exampleFormControlTextarea1">Answer to the patient</label>
+                              <label for="exampleFormControlTextarea1">How can we help you?</label>
                               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comment"></textarea>
                         </div>
                         <div class="form-check mx-4 px-5">

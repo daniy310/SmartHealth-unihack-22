@@ -29,9 +29,11 @@ if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['CNP'
             if(mysqli_num_rows($result) === 1){
                   $row = mysqli_fetch_assoc($result);
                   if($row['firstname'] === $firstname && $row['lastname'] === $lastname && $row['CNP'] === $CNP){
-                        $delete = "DELETE FROM users WHERE diagnostic, treatment, roomnumber, timeadmin, dataint";
-                        $result2 = mysqli_query($conn, $delete);
-                        if($result2){
+                        $sql2 = "UPDATE users SET diagnostic = '', treatment = '', roomnumber = '', timeadmin = '', dataint ='' WHERE CNP = $CNP";
+                        $result2 = mysqli_query($conn, $sql2);
+                        $sql3 = "UPDATE users SET dataout = '$dataout' WHERE CNP = $CNP";
+                        $result3 = mysqli_query($conn, $sql3);
+                        if($result2 && $result3){
                               header("Location: discharge.php?success=Delete successfully!");
                               exit();
                         }else{
