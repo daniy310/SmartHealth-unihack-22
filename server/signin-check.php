@@ -36,6 +36,12 @@ if(isset($_POST['email']) && isset($_POST['password'])){
                         $_SESSION['CNP'] = $row['CNP'];
                         $_SESSION['city'] = $row['city'];
                         $_SESSION['zipcode'] = $row['zipcode'];
+                        $_SESSION['roomnumber'] = $row['roomnumber'];
+                        $_SESSION['diagnostic'] = $row['diagnostic'];
+                        $_SESSION['treatment'] = $row['treatment'];
+                        $_SESSION['timeadmin'] = $row['timeadmin'];
+                        $_SESSION['dataint'] = $row['dataout'];
+                        $_SESSION['comment'] = $row['comment'];
                         if($_SESSION['user'] == 1){
                               header("Location: doctor.php");
                               exit();

@@ -8,7 +8,10 @@ if(isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user'
 <body>
       <?php include ('includes/navbard.php');?>
       <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/signin.jpg')"> 
-                  <h1 class="text-center">Assistance</h1>
+                  
+                  <div class="d-flex justify-content-center align-items-center ">     
+                        <h1 class="text-center h1-index">Assistance</h1>
+                  </div>
       </div>
       <div class="container my-4">
             <table class="table">

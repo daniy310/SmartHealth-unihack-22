@@ -61,6 +61,7 @@
     background-color: #04ebec !important;
 }
 
+
 .formHack {
     margin-top: -10rem !important;
     background-color: white;
@@ -70,6 +71,8 @@
     color: white;
     font-size: 55px !important;
     font-weight: bold !important;
+    background-color: rgba(33, 37, 41, .80) !important;
+    border-radius: 10px;
 }
 
 .h1-hack {
@@ -89,4 +92,8 @@
 
 .teamemb {
     background-color: rgba(33, 37, 41, 0.9);
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
 }

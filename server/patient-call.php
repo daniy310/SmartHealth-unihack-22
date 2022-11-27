@@ -8,7 +8,10 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
     <body>
         <?php include('includes/navbarp.php'); ?>
         <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/signin.jpg')">
-            <h1 class="text-center h1-hack">Hello <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?></h1>
+            
+            <div class="d-flex justify-content-center align-items-center ">     
+                <h1 class="text-center h1-index">Hello <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?></h1>
+            </div>
         </div>
 
         <head>
@@ -70,7 +73,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
             </script>
         </body>
 
-        </html>
+        <?php require_once('includes/footer.php'); ?>
 
     <?php
 } else {

@@ -3,7 +3,9 @@
 <body>
       <?php include('includes/navbarindex.php'); ?>
       <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/hospital-staff.jpg');">
-            <h1 class="text-center h1-index">Hello ! How can we help you today ?</h1>
+            <div class="d-flex justify-content-center align-items-center ">     
+                  <h1 class="text-center h1-index">Hello ! How can we help you today ?</h1>
+            </div>
       </div>
 
       <div class="container my-4" id="about">
