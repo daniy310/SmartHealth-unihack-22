@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user']) && $_SESSION['user'] == '2') {
 
 ?>
@@ -46,6 +45,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
                 </div>
             </div>
 
+
+            <br><br><br><br>
+            <button id="lightOff">Light Off</button>
 
             <script>
                 var userId = `<?php echo $_SESSION['id'] ?>`;

@@ -7,7 +7,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
       <?php require_once('includes/header.php'); ?>
 
       <body>
-            <?php include('includes/navbarp.php'); ?>
+            <?php include('includes/navbarp.php');?>
             <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/signin.jpg')">
                   <h1 class="text-center h1-hack">Hello <?php echo $_SESSION['firstname'] . " " . $_SESSION['lastname']; ?></h1>
             </div>
@@ -16,7 +16,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
       </body>
 
       <?php require_once('includes/footer.php'); ?>
-
 
 <?php
 } else {
