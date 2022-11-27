@@ -130,5 +130,6 @@
       <div class="text-center mt-4 map" style="margin-bottom: -1rem">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89245.2035118213!2d25.526423254662674!3d45.65257669660959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b35b862aa214f1%3A0x6cf5f2ef54391e0f!2zQnJhyJlvdg!5e0!3m2!1sro!2sro!4v1669492505566!5m2!1sro!2sro" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <?php require_once('includes/footer.php'); ?>
+     
 </body>
+<?php require_once('includes/footer.php'); ?>
