@@ -8,7 +8,7 @@
 
       <div class="container my-4" id="about">
             <br><br><br><br>
-            <h2 class="hello"><b>Smart Health SH = new Healthcare()</b></h2><br><br>
+            <h2 class="hello mb-2 text-center"><b>Smart Health SH = new Healthcare()</b></h2><br><br>
             <div class="container">
                   <div class="row align-items-center">
                         <div class="col-lg-4 me-auto mb-5 ">

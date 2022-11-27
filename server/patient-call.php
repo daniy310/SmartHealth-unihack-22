@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user']) && isset($_SESSION['user']) == '2') {
+if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user']) && $_SESSION['user'] == '2') {
 
 ?>
     <?php require_once('includes/header.php'); ?>
@@ -47,12 +47,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
             </div>
 
 
-
-
-            <br><br><br><br>
-            <button id="lightOff">Light Off</button>
-
-
             <script>
                 var userId = `<?php echo $_SESSION['id'] ?>`;
 
@@ -68,13 +62,6 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
                     var text = document.getElementById('callInput').value;
                     var xmlHttp = new XMLHttpRequest();
                     xmlHttp.open("GET", `http://localhost:3000/patient_call/${userId}/${text}`, false); // false for synchronous request
-                    xmlHttp.send(null);
-                    var response = xmlHttp.responseText;
-                }
-
-                document.getElementById('lightOff').onclick = function() { // DE MUTAT INTR O PAGINA A DOCTORULUI
-                    var xmlHttp = new XMLHttpRequest();
-                    xmlHttp.open("GET", "http://localhost:3000/patient_lightOff", false); // false for synchronous request
                     xmlHttp.send(null);
                     var response = xmlHttp.responseText;
                 }
