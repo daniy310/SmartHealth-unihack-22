@@ -9,7 +9,9 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
       <body>
             <?php include('includes/navbard.php'); ?>
             <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/doc2.jpg')">
-                  <h1 class="text-center">Discharge</h1>
+                  <div class="d-flex justify-content-center align-items-center ">     
+                        <h1 class="text-center h1-index">Discharge</h1>
+                  </div>
             </div>
             <div class="container my-4 py-4">
                   <div class="d-flex justify-content-center mb-3">
