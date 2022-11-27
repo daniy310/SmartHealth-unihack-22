@@ -42,42 +42,48 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
                               <div class="mb-3 px-5">
                                     <input class="form-control mb-3" type="text" placeholder="Diagnostic" name="diagnostic">
                               </div>
-                              <div class=" mb-3 px-5">
-                                    <select name="treatment" class="form-select " aria-label=".form-select-sm example">
-                                          <option selected>Choose a treatment</option>
-                                          <option value="perfusion 1">Perfusion 1</option>
-                                          <option value="perfusion 2">Perfusion 2</option>
-                                          <option value="pill 1">Pill 1</option>
-                                          <option value="pill 2">Pill 2</option>
-                                          <option value="pill 3">Pill 3</option>
-                                          <option value="injection 1">Injection 1</option>
-                                          <option value="injection 2">Injection 2</option>
-                                          <option value="injection 3">Injection 3</option>
-                                    </select>
-                              </div>
-                              <div class=" mb-3 px-5">
-                                    <input class="form-control mb-3" type="text" placeholder="Room Number" name="roomnumber">
-                              </div>
-                              <div class="mb-3 px-5">
-                                    <input class="form-control mb-3" type="text" placeholder="Treatment time administration" name="timeadmin">
-                              </div>
-                              <div class="form-check mx-4 px-5">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" value="gridCheck" required>
-                                    <label class="form-check-label" for="gridCheck">
-                                          Check me out
-                                    </label>
-                              </div>
-                              <div class="mb-3 px-5">
-                                    <button type="submit" class="btn signinbutton">Submit</button>
-                              </div>
-                        </form>
                   </div>
+                  <div class="mb-3 px-5">
+                        <input class="form-control mb-3" type="text" placeholder="CNP" name="CNP" value="">
+                  </div>
+                  <div class="mb-3 px-5">
+                        <input class="form-control mb-3" type="text" placeholder="Diagnostic" name="diagnostic">
+                  </div>
+                  <div class=" mb-3 px-5">
+                        <select name="treatment" class="form-select " aria-label=".form-select-sm example">
+                              <option selected>Choose a treatment</option>
+                              <option value="perfusion 1">Perfusion 1</option>
+                              <option value="perfusion 2">Perfusion 2</option>
+                              <option value="pill 1">Pill 1</option>
+                              <option value="pill 2">Pill 2</option>
+                              <option value="pill 3">Pill 3</option>
+                              <option value="injection 1">Injection 1</option>
+                              <option value="injection 2">Injection 2</option>
+                              <option value="injection 3">Injection 3</option>
+                        </select>
+                  </div>
+                  <div class=" mb-3 px-5">
+                        <input class="form-control mb-3" type="text" placeholder="Room Number" name="roomnumber">
+                  </div>
+                  <div class="mb-3 px-5">
+                        <input class="form-control mb-3" type="text" placeholder="Treatment time administration" name="timeadmin">
+                  </div>
+                  <div class="form-check mx-4 px-5">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" value="gridCheck" required>
+                        <label class="form-check-label" for="gridCheck">
+                              Check me out
+                        </label>
+                  </div>
+                  <div class="mb-3 px-5">
+                        <button type="submit" class="btn signinbutton">Submit</button>
+                  </div>
+                  </form>
+            </div>
             </div>
             </div>
       </body>
 
       <?php require_once('includes/footer.php'); ?>
-
 <?php
 } else {
       header("Location: signin.php");

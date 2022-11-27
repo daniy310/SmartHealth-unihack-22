@@ -47,12 +47,24 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['email'])) {
                               <div class="mb-3 px-5">
                                     <button type="submit" class="btn signinbutton">Submit</button>
                               </div>
-                        </form>
                   </div>
+                  <div class="mb-3 px-5">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                  </div>
+                  <div class="form-check mx-4 px-5">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" value="gridCheck" required>
+                        <label class="form-check-label" for="gridCheck">
+                              Check me out
+                        </label>
+                  </div>
+                  <div class="mb-3 px-5">
+                        <button type="submit" class="btn signinbutton">Submit</button>
+                  </div>
+                  </form>
+            </div>
             </div>
       </body>
-
-
       <?php require_once('includes/footer.php'); ?>
 
 <?php

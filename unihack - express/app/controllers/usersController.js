@@ -73,6 +73,16 @@ const roomBlindsArduino = () => {
     return handleSuccess(res, "Sent room blinds command to arduino", "");
 };
 
+const roomLightArduino = () => {
+    port.write("0");
+    return handleSuccess(res, "Sent room lights command to arduino", "");
+};
+
+const roomBlindsArduino = () => {
+    port.write("0");
+    return handleSuccess(res, "Sent room blinds command to arduino", "");
+};
+
 module.exports = {
     findUserById,
     sendToArduino,
