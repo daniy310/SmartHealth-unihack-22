@@ -45,11 +45,11 @@ if (!isset($_SESSION['id']) && !isset($_SESSION['email'])) {
                                     <label for="exampleInputPassword1" class="form-label">Password</label>
                                     <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                               </div>
-                              <div class="row mt-3 mb-3 px-5">
-                                    <div class="col">
+                              <div class="row my-3">
+                                    <div class="col px-5">
                                           <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="firstname">
                                     </div>
-                                    <div class="col">
+                                    <div class="col pr-4">
                                           <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lastname">
                                     </div>
                               </div>

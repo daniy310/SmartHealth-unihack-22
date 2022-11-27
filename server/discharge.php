@@ -8,7 +8,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
 
       <body>
             <?php include('includes/navbard.php'); ?>
-            <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/signin.jpg')">
+            <div class="page-header min-vh-75 relative row text-center" style="background-image: url('includes/images/doc2.jpg')">
                   <h1 class="text-center">Discharge</h1>
             </div>
             <div class="container my-4 py-4">
@@ -29,11 +29,11 @@ if (isset($_SESSION['id']) && isset($_SESSION['email']) && isset($_SESSION['user
                                     </div>
                               <?php } ?>
 
-                              <div class="row mt-3 mb-3 px-5">
-                                    <div class="col">
+                              <div class="row my-3">
+                                    <div class="col px-5">
                                           <input type="text" class="form-control" placeholder="First name" aria-label="First name" name="firstname">
                                     </div>
-                                    <div class="col">
+                                    <div class="col pr-4">
                                           <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="lastname">
                                     </div>
                               </div>
