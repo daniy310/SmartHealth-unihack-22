@@ -16,7 +16,7 @@ void setup() {
   lcd.begin(16, 2);
 }
 
-void afisare() { //prelucreaza + afiseaza primul string din messages
+void afisare() { //processing + showing the first string from messages
   String result = messages[0];
   String message = "";
   int roomNumber = 0;
@@ -37,7 +37,7 @@ void afisare() { //prelucreaza + afiseaza primul string din messages
   digitalWrite(lightPin, HIGH);
   lcd.setCursor(0, 0);
 
-  if (messages[0][2] == '1') { //urgenta
+  if (messages[0][2] == '1') { //emergency
     lcd.print("! ");
   }
 
@@ -47,7 +47,7 @@ void afisare() { //prelucreaza + afiseaza primul string din messages
   lcd.setCursor(0, 1);
   lcd.print(message);
 
-  for (int i = 0; i < (messages[0][2] == '1' ? 80 : 4); i++) { //sa sune la urm mesaj, sa insiste la urgente
+  for (int i = 0; i < (messages[0][2] == '1' ? 80 : 4); i++) { //calling the buzzer on the next message, insisting if it is an emergency
     digitalWrite(buzzerPin, HIGH);
     if (messages[0][2] == '1')
       digitalWrite(lightPin, HIGH);
@@ -78,26 +78,26 @@ void loop() {
     result.trim();
     lcd.setCursor(0, 0);
 
-    if (result[0] == '0') {//daca e apel de oprire -> afisam urm mesaj (messages[0])
-      if (messagesLength == 1) {//daca avem un singur mesaj - stergem tot
+    if (result[0] == '0') {//if it's a stop call -> show the next message (messages[0])
+      if (messagesLength == 1) {//if we only have one message -> delete everything
         messages[0] = "";
       }
 
-      for (int i = 1; i < messagesLength; i++) { //stergem primul mesaj din lista, ca urm sa fie messages[0]
+      for (int i = 1; i < messagesLength; i++) { //deleting the first message from our array, so the next one will now be messages[0]
         messages[i - 1] = messages[i];
       }
       messagesLength--;
 
-      if (messagesLength > 0) { //daca mai avem mesaje afisam messages[0]
+      if (messagesLength > 0) { //if we have any more messages we show messages[0]
         afisare();
-      } else {                  //daca nu mai avem mesaje stergem ce e pe ecran, inchidem becul si resetam lcdFull
+      } else {                  //else we clear the screen, turn off the LED and reset lcdFull
         lcd.clear();
         digitalWrite(lightPin, LOW);
         lcdFull = 0;
       }
 
-    } else { //daca e apel de call -> il adaugam in lista
-      if (result[2] == '1') { // urgenta -> o adaugam prima in lista si o afisam
+    } else { //if it's a ON call -> we add it to the array
+      if (result[2] == '1') { // emergency -> we prioritise it in the array and show it
         messagesLength = messagesLength + 1;
         for (int i = messagesLength; i > 0; i--)
           messages[i] = messages[i - 1];
