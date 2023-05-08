@@ -21,6 +21,11 @@
 ![Imagine WhatsApp 2023-05-08 la 21 36 19](https://user-images.githubusercontent.com/68704220/236905100-bd0e6a0b-5e48-4ddb-a6ff-db7154057b83.jpg)
 # Patients Table
 ![daw](https://user-images.githubusercontent.com/68704220/236905213-1deaac5b-26d6-4278-9c62-6fd001221c7a.jpg)
+# Hardware - Arduino
+Showing a patient call from Room 17 with the specific message entered by the patient. The LCD has been turned ON and the buzzer emitted the calling soung.
+
+
+![6371a8ed-f699-41bc-8e04-cb61f5103177](https://user-images.githubusercontent.com/68704220/236907478-70402275-7c64-4f7c-8eb9-c7c3b1937c30.jpg)
 
 
 #
